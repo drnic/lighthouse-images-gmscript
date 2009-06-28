@@ -3,8 +3,8 @@ require 'rake'
 require 'rake/clean'
 
 APP_VERSION  = '1.0.0'
-APP_NAME     = 'threaded-gtalk-gmscript'
-APP_FILE_NAME= "threaded-gtalk.user.js"
+APP_NAME     = 'lighthouse-images-gmscript'
+APP_FILE_NAME= "lighthouse-images.user.js"
 
 APP_ROOT     = File.expand_path(File.dirname(__FILE__))
 APP_SRC_DIR  = File.join(APP_ROOT, 'public')
@@ -21,9 +21,9 @@ end
 
 desc "Builds the compiled JS file that is downloaded by greasemonkey script"
 task :build do
-  files = %w[jquery jquery.noConflict threaded_gtalk threaded_gtalk_theme]
+  files = %w[jquery jquery.noConflict lighthouse_images lighthouse_images_theme]
   content = files.map { |file| File.read(File.join(APP_SRC_DIR, file + ".js")) }.join("\n\n")
-  File.open(File.join(APP_SRC_DIR, "threaded_gtalk_complete.js"), "w") do |file|
+  File.open(File.join(APP_SRC_DIR, "lighthouse_images_complete.js"), "w") do |file|
     file << content
   end
 end

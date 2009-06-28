@@ -7,10 +7,10 @@
 // ==/UserScript==
 
 // THIS FILE IS FOR LOCAL QA TESTING
-// It loads the public/threaded_gtalk_complete.js file which is built by `rake build`
-// The project must be mounted as http://threaded-gtalk-gmscript.local
+// It loads the public/lighthouse_images_complete.js file which is built by `rake build`
+// The project must be mounted as http://lighthouse-images-gmscript.local
 // I do this using Passenger (drop project folder into Passenger PrefPane)
-// The threaded-gtalk.user.js file contains the public url for downloading scripts and assets
+// The lighthouse-images.user.js file contains the public url for downloading scripts and assets
 
 (function() {
   var head = document.getElementsByTagName("head")[0];
@@ -21,5 +21,5 @@
     head.appendChild(script);
   };
 
-  require("http://threaded-gtalk-gmscript.local/threaded_gtalk_complete.js");
+  require("http://lighthouse-images-gmscript.local/lighthouse_images_complete.js");
 })();
